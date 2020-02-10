@@ -12,6 +12,12 @@ This lesson will be about getting started with Git. Explaining some background o
   - [Local Version Controls Systems](#local-version-control-systems)
   - [Centralized Version Control Systems](#centralized-version-control-systems)
   - [Distributed Version Control Systems](#distributed-version-control-systems)
+- [What is GIT and how it works](#what-is-git-and-how-it-works)
+  - [Snapshots, Not Differences](#snapshots,-not-differences)
+  - [Nearly Every Operation Is Local](#nearly-every-operation-is-local)
+  - [Git Has Integrity](#git-has-integrity)
+  - [Git Generally Only Adds Data](#git-generally-only-adds-data)
+- [The Three Stages](#the-three-stages)
 
 ---
 
