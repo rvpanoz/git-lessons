@@ -25,6 +25,23 @@ This lesson will be about getting started with Git. Explaining some background o
   - [Keep your branch strategy simple](#keep-your-branch-strategy-simple)
   - [Use feature branches for your work](#use-feature-branches-for-your-work)
 - [Git exercises](#git-exercises)
+  - [Setting up the repository](#setting-up-the-repository)
+    - [git clone](#git-clone)
+    - [git config](#git-config)
+  - [Using branches](#using-branches)
+    - [git branch](#git-branch)
+    - [git checkout](#git-checkout)
+    - [git merge](#git-merge)
+  - [Saving changes](#saving-changes)
+    - [git add](#git-add)
+    - [git commit](#git-commit)
+    - [git stash](#git-stash)
+    - [git status](#git-status)
+  - [Undoing changes](#undoing-changes)
+    - [git checkout](#git-checkout)
+    - [git reset](#git-reset)
+    - [git clean](#git-clean)
+  - [.gitignore](#.gitignore)
 
 ---
 
