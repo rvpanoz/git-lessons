@@ -29,18 +29,21 @@ This lesson will be about getting started with Git. Explaining some background o
     - [git clone](#git-clone)
     - [git config](#git-config)
   - [Using branches](#using-branches)
-    - [git branch](#git-branch)
     - [git checkout](#git-checkout)
-    - [git merge](#git-merge)
+    - [git branch](#git-branch)
   - [Saving changes](#saving-changes)
     - [git add](#git-add)
+    - [git status](#git-status)
     - [git commit](#git-commit)
     - [git stash](#git-stash)
-    - [git status](#git-status)
   - [Undoing changes](#undoing-changes)
-    - [git checkout](#git-checkout)
     - [git reset](#git-reset)
     - [git clean](#git-clean)
+  - [Collaborating](#collaborating)
+    - [git push](#git-push)
+    - [git pull](#git-pull)
+    - [git fetch](#git-fetch)
+    - [git merge](#git-merge)
   - [.gitignore](#.gitignore)
 
 ---
@@ -241,7 +244,44 @@ Build your strategy from these three concepts:
 Develop your features and fix bugs in feature branches based off your master branch. These branches are also known as topic branches. Feature branches isolate work in progress from the completed work in the master branch.
 
 <p align="center">
-  <img alt="featurebranching" src="./assets/images/featurebranching.png">
+  <img alt="featurebranching1" src="./assets/images/featurebranching1.svg">
 </p>
 
 ## Git Exercises
+
+### Setting up the repository
+
+Clone the repository using the following command in terminal
+
+```
+git clone https://github.com/rvpanoz/git-lessons.git
+cd git-lessons
+```
+
+Configure git using the following command in the terminal
+
+```
+git config --global user.email "your_email@example.com"
+```
+
+### Using branches
+
+Use the git checkout command and switch to the develop branch
+
+```
+git checkout develop
+```
+
+Create a new branch from the develop branch and select it using
+the git checkout command
+
+```
+git branch feature/my-awesome-feat
+git checkout feature/my-awesome-feat
+```
+
+or you can use the git checkout command
+
+```
+git checkout -b feature/my-awesome-feat
+```
