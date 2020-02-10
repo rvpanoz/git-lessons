@@ -6,6 +6,24 @@ Git - Distributed Version Control System (DVCS)
 
 This lesson will be about getting started with Git. Explaining some background on version control tools, then move on to how Git works and start working with it.
 
+---
+
+- [About version control](#about-version-control)
+  - [Local Version Controls Systems](#local-version-control-systems)
+  - [Centralized Version Control Systems](#centralized-version-control-systems)
+  - [Distributed Version Control Systems](#distributed-version-control-systems)
+- [What is GIT and how it works](#what-is-git-and-how-it-works)
+  - [Snapshots, Not Differences](#snapshots-not-differences)
+  - [Nearly Every Operation Is Local](#nearly-every-operation-is-local)
+  - [Git Has Integrity](#git-has-integrity)
+  - [Git Generally Only Adds Data](#git-generally-only-adds-data)
+- [The Three Stages](#the-three-stages)
+- [Initializing a Repository in a directory](#initializing-a-repository-in-a-directory)
+- [Cloning an Existing Repository](#cloning-an-existing-repository)
+- [Recording Changes to the Repository](#recording-changes-to-the-repository)
+
+---
+
 ## About Version Control
 
 Version control is a system that records changes to a file or set of files over time so that you can recall specific versions later.
@@ -64,7 +82,7 @@ Cons
 
 GIT is Distributed Version Control System. DVCS for short. The major difference between Git and any other VCS (Subversion and friends included) is the way Git thinks about its data.
 
-### Snapshots, Not Differences
+### Snapshots Not Differences
 
 Other systems (CVS, Subversion, and so on) think of the information they store as a set of files and the changes made to each file over time (this is commonly described as `delta-based version control`).
 
@@ -72,7 +90,9 @@ Other systems (CVS, Subversion, and so on) think of the information they store a
   <img alt="deltas" src="./assets/images/deltas.png">
 </p>
 
-Git thinks of its data more like a series of snapshots of a miniature filesystem. With Git, every time you commit, or save the state of your project, Git basically takes a picture of what all your files look like at that moment and stores a reference to that snapshot. To be efficient, if files have not changed, Git doesn’t store the file again, just a link to the previous identical file it has already stored.
+> Git thinks of its data more like a series of snapshots of a miniature filesystem.
+
+With Git, every time you commit, or save the state of your project, Git basically takes a picture of what all your files look like at that moment and stores a reference to that snapshot. To be efficient, if files have not changed, Git doesn’t store the file again, just a link to the previous identical file it has already stored.
 
 `Git thinks about its data more like a stream of snapshots.`
 
@@ -125,3 +145,80 @@ The basic Git workflow goes something like this:
 2. You selectively stage just those changes you want to be part of your next commit, which adds only those changes to the staging area.
 
 3. You do a commit, which takes the files as they are in the staging area and stores that snapshot permanently to your Git directory.
+
+## Initializing a Repository in a directory
+
+First we have to check if git is installed in our machine running the command in the terminal:
+
+```
+$ git --version
+```
+
+Then navigate to the project's directory for example
+
+```
+$ cd /home/user/my_project (linux)
+$ cd c:/Users/user/my_project (windows)
+$ cd /Users/user/my_project (macOS)
+
+```
+
+and then run the command
+
+```
+$ git init
+```
+
+This creates a new subdirectory named .git that contains all of your necessary repository files — a Git repository skeleton. At this point, nothing in your project is tracked yet.
+
+## Cloning an Existing Repository
+
+You clone a repository with git clone <url>. For example, if you want to clone the the repo we are working, you can do so like this:
+
+```
+$ git clone https://github.com/rvpanoz/git-lessons
+```
+
+If you want to clone the repository into a directory named something other than git-lessons, you can specify the new directory name as an additional argument:
+
+```
+$ git clone git clone https://github.com/rvpanoz/git-lessons my-github-lessons
+```
+
+## Recording Changes to the Repository
+
+Typically, you’ll want to start making changes and committing snapshots of those changes into your repository each time the project reaches a state you want to record.
+
+> Remember that each file in your working directory can be in one of two states: tracked or untracked.
+
+`Tracked` files are files that were in the last snapshot; they can be unmodified, modified, or staged.
+
+> In short, tracked files are files that Git knows about.
+
+`Untracked` files are everything else — any files in your working directory that were not in your last snapshot and are not in your staging area.
+
+> When you first clone a repository, all of your files will be tracked and unmodified because Git just checked them out and you haven’t edited anything.
+
+## Git Branching
+
+Branching means you diverge from the main line of development and continue to do work without messing with that main line. Git branches are effectively a pointer to a snapshot of your changes.
+
+A Git branch is essentially an independent line of development. You can take advantage of branching when working on new features or bug fixes because it isolates your work from that of other team members.
+
+> The “master” branch in Git is not a special branch. It is exactly like any other branch. The only reason nearly every repository has one is that the git init command creates it by default and most people don’t bother to change it.
+
+### Keep your branch strategy simple
+
+Build your strategy from these three concepts:
+
+- Use feature branches for all new features and bug fixes.
+- Merge feature branches into the master branch using pull requests.
+- Keep a high quality, up-to-date master branch.
+
+### Use feature branches for your work
+
+Develop your features and fix bugs in feature branches based off your master branch. These branches are also known as topic branches. Feature branches isolate work in progress from the completed work in the master branch.
+
+<p align="center">
+  <img alt="featurebranching" src="./assets/images/featurebranching.png">
+</p>
