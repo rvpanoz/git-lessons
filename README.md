@@ -6,6 +6,13 @@ Git - Distributed Version Control System (DVCS)
 
 This lesson will be about getting started with Git. Explaining some background on version control tools, then move on to how Git works and start working with it.
 
+---
+
+- [About version control](#about_version_control)
+  - [Local Version Controls Systems](#local_version_control_systems)
+
+---
+
 ## About Version Control
 
 Version control is a system that records changes to a file or set of files over time so that you can recall specific versions later.
