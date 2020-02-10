@@ -8,8 +8,10 @@ This lesson will be about getting started with Git. Explaining some background o
 
 ---
 
-- [About version control](#about_version_control)
-  - [Local Version Controls Systems](#local_version_control_systems)
+- [About version control](#about-version-control)
+  - [Local Version Controls Systems](#local-version-control-systems)
+  - [Centralized Version Control Systems](#centralized-version-control-systems)
+  - [Distributed Version Control Systems](#distributed-version-control-systems)
 
 ---
 
