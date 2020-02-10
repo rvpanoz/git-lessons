@@ -21,6 +21,10 @@ This lesson will be about getting started with Git. Explaining some background o
 - [Initializing a Repository in a directory](#initializing-a-repository-in-a-directory)
 - [Cloning an Existing Repository](#cloning-an-existing-repository)
 - [Recording Changes to the Repository](#recording-changes-to-the-repository)
+- [Git Branching](#git-branching)
+  - [Keep your branch strategy simple](#keep-your-branch-strategy-simple)
+  - [Use feature branches for your work](#use-feature-branches-for-your-work)
+- [Git exercises](#git-exercises)
 
 ---
 
@@ -222,3 +226,5 @@ Develop your features and fix bugs in feature branches based off your master bra
 <p align="center">
   <img alt="featurebranching" src="./assets/images/featurebranching.png">
 </p>
+
+## Git Exercises
