@@ -388,18 +388,17 @@ git pull
 
 ### Merge Branches
 
-Consider the scenario. You are working on a feature branch and the develop branch tip has moved and you need
-the changes.
+Consider the scenario
 
 <p align="center">
   <img alt="merge-branches" src="./assets/images/branch.png">
 </p>
 
-Using the git merge to merge the develop and feature branch
+Using the git merge to merge the master and feature branch
 
 ```
 git checkout feature-branch
-git merge develop
+git merge master
 ```
 
 This creates a new “merge commit” in the feature branch that ties together the histories of both branches, giving you a branch structure that looks like this:
@@ -412,7 +411,7 @@ As an alternative to merging, you can rebase the feature branch onto master bran
 
 ```
 git checkout feature-branch
-git rebase develop
+git rebase master
 ```
 
 This moves the entire feature branch to begin on the tip of the develop branch, effectively incorporating all of the new commits in develop.
