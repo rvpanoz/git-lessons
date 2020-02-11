@@ -1,0 +1,1 @@
+const NOW = new Date();

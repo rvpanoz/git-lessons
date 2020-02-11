@@ -357,3 +357,28 @@ git reset --hard HEAD`1 // move to the previous commit
 ```
 
 > You can think of the HEAD as the "current branch". When you switch branches with git checkout, the HEAD revision changes to point to the tip of the new branch.
+
+### Collaborating
+
+In order to downloads commits, files, and refs from a remote repository into your local repo
+use the git fetch and git pull commands
+
+```
+git fetch
+```
+
+if there is no conflicts you can issue the git merge command to join two or more development histories together
+
+```
+git merge
+```
+
+> You can consider git fetch the 'safe' version of the two commands. It will download the remote content but not update your local repo's working state, leaving your current work intact.
+
+```
+git pull
+```
+
+> git pull is the more aggressive alternative, it will download the remote content for the active local branch and immediately execute git merge to create a merge commit for the new remote content. If you have pending changes in progress this will cause conflicts and kickoff the merge conflict resolution flow.
+
+`git pull is similar to git fetch -> git merge`
