@@ -44,6 +44,7 @@ This lesson will be about getting started with Git. Explaining some background o
     - [git pull](#git-pull)
     - [git fetch](#git-fetch)
     - [git merge](#git-merge)
+  - [Merge Branches](#update-branches)
   - [.gitignore](#.gitignore)
 
 ---
@@ -219,6 +220,8 @@ A Git branch is essentially an independent line of development. You can take adv
 
 > The “master” branch in Git is not a special branch. It is exactly like any other branch. The only reason nearly every repository has one is that the git init command creates it by default and most people don’t bother to change it.
 
+`A very useful model is the [gitflow-workflow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow)`
+
 ### Keep your branch strategy simple
 
 Build your strategy from these three concepts:
@@ -382,3 +385,40 @@ git pull
 > git pull is the more aggressive alternative, it will download the remote content for the active local branch and immediately execute git merge to create a merge commit for the new remote content. If you have pending changes in progress this will cause conflicts and kickoff the merge conflict resolution flow.
 
 `git pull is similar to git fetch -> git merge`
+
+### Merge Branches
+
+Consider the scenario. You are working on a feature branch and the develop branch tip has moved and you need
+the changes.
+
+<p align="center">
+  <img alt="merge-branches" src="./assets/images/branch.png">
+</p>
+
+Using the git merge to merge the develop and feature branch
+
+```
+git checkout feature-branch
+git merge develop
+```
+
+This creates a new “merge commit” in the feature branch that ties together the histories of both branches, giving you a branch structure that looks like this:
+
+<p align="center">
+  <img alt="merge" src="./assets/images/merge.svg">
+</p>
+
+As an alternative to merging, you can rebase the feature branch onto master branch using the following commands:
+
+```
+git checkout feature-branch
+git rebase develop
+```
+
+This moves the entire feature branch to begin on the tip of the develop branch, effectively incorporating all of the new commits in develop.
+
+> But, instead of using a merge commit, rebasing re-writes the project history by creating brand new commits for each commit in the original branch.
+
+<p align="center">
+  <img alt="rebase" src="./assets/images/rebase.svg">
+</p>
