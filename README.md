@@ -44,6 +44,7 @@ This lesson will be about getting started with Git. Explaining some background o
     - [git pull](#git-pull)
     - [git fetch](#git-fetch)
     - [git merge](#git-merge)
+  - [Merge Branches](#update-branches)
   - [.gitignore](#.gitignore)
 
 ---
@@ -382,3 +383,19 @@ git pull
 > git pull is the more aggressive alternative, it will download the remote content for the active local branch and immediately execute git merge to create a merge commit for the new remote content. If you have pending changes in progress this will cause conflicts and kickoff the merge conflict resolution flow.
 
 `git pull is similar to git fetch -> git merge`
+
+### Merge Branches
+
+Consider the scenario. You are working on a feature branch and the develop branch tip has moved and you need
+the changes.
+
+<p align="center">
+  <img alt="merge-branches" src="./assets/images/branch.png">
+</p>
+
+Using the git merge to merge the develop and feature branch
+
+```
+git checkout develop
+git merge feature-branch
+```
