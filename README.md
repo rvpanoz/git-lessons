@@ -59,31 +59,24 @@ Using a VCS also generally means that if you screw things up or lose files, you 
 - simple database that kept all the changes to files under revision control
   ([RCS](https://www.gnu.org/software/rcs/))
 
-Pros
+:+1: Easy setup
 
-- Easy setup
-
-Cons
-
-- High error proned
+:-1: High error proned
 
 ### Centralized Version Control Systems
 
-- collaboration with others
-- single server that contains all the versioned files, and a number of clients that check out files from that central place. (CVS, Subversion)
+- Collaboration with others
+- Single server that contains all the versioned files, and a number of clients that check out files from that central place. (CVS, Subversion)
 
 <p align="center">
   <img alt="centralized" src="./assets/images/centralized.png">
 </p>
 
-Pros
+:+1: Everyone knows to a certain degree what everyone else on the project is doing.
 
-- Everyone knows to a certain degree what everyone else on the project is doing.
-- Far easier to administer a CVCS than it is to deal with local databases on every client.
+:+1: Far easier to administer a CVCS than it is to deal with local databases on every client.
 
-Cons
-
-- Single point of failure that the centralized server represents.
+:-1: Single point of failure that the centralized server represents.
 
 ### Distributed Version Control Systems
 
@@ -93,14 +86,11 @@ Cons
   <img alt="distributed" src="./assets/images/distributed.png">
 </p>
 
-Pros
+:+1: If any server dies, and these systems were collaborating via that server, any of the client repositories can be copied back up to the server to restore it
 
-- If any server dies, and these systems were collaborating via that server, any of the client repositories can be copied back up to the server to restore it
-- Every clone is really a full backup of all the data
+:+1: Every clone is really a full backup of all the data
 
-Cons
-
-- Slow initialization
+:-1: Slow initialization
 
 ## What is GIT and how it works?
 
@@ -114,11 +104,9 @@ Other systems (CVS, Subversion, and so on) think of the information they store a
   <img alt="deltas" src="./assets/images/deltas.png">
 </p>
 
-> Git thinks of its data more like a series of snapshots of a miniature filesystem.
-
 With Git, every time you commit, or save the state of your project, Git basically takes a picture of what all your files look like at that moment and stores a reference to that snapshot. To be efficient, if files have not changed, Git doesn’t store the file again, just a link to the previous identical file it has already stored.
 
-`Git thinks about its data more like a stream of snapshots.`
+> Git thinks about its data more like a stream of snapshots.
 
 <p align="center">
   <img alt="snapshots" src="./assets/images/snapshots.png">
@@ -150,7 +138,7 @@ Git has three main states that your files can reside in: modified, staged, and c
 
 - `Committed` means that the data is safely stored in your local database.
 
-This leads us to the three main sections of a Git project: the working tree, the staging area, and the Git directory.
+> This leads us to the three main sections of a Git project: the working tree, the staging area, and the Git directory.
 
 <p align="center">
   <img alt="areas" src="./assets/images/areas.png">
@@ -365,5 +353,7 @@ git clean -f -d // -f alias of -force, -d is useful when you want to clear an en
 Finally use the git reset --hard command to move the HEAD into a specific commit
 
 ```
-git reset --hard HEAD`1 // remove the last commit
+git reset --hard HEAD`1 // move to the previous commit
 ```
+
+> You can think of the HEAD as the "current branch". When you switch branches with git checkout, the HEAD revision changes to point to the tip of the new branch.
