@@ -125,10 +125,6 @@ Most operations in Git need only local files and resources to operate — ge
 
 Everything in Git is checksummed before it is stored and is then referred to by that checksum. This means it’s impossible to change the contents of any file or directory without Git knowing about it.
 
-### Git Generally Only Adds Data
-
-When you do actions in Git, nearly all of them only add data to the Git database. After you commit a snapshot into Git, it is very difficult to lose, especially if you regularly push your database to another repository.
-
 ## The Three stages
 
 Git has three main states that your files can reside in: modified, staged, and committed:
