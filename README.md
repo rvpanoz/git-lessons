@@ -387,7 +387,7 @@ git pull
 Consider the scenario
 
 <p align="center">
-  <img alt="merge-branches" src="./assets/images/branch-merge.png">
+  <img alt="merge-branches" src="./assets/images/branch.png">
 </p>
 
 Using the git merge to merge the master and feature branch
