@@ -220,6 +220,8 @@ A Git branch is essentially an independent line of development. You can take adv
 
 > The “master” branch in Git is not a special branch. It is exactly like any other branch. The only reason nearly every repository has one is that the git init command creates it by default and most people don’t bother to change it.
 
+`A very useful model is the [gitflow-workflow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow)`
+
 ### Keep your branch strategy simple
 
 Build your strategy from these three concepts:
