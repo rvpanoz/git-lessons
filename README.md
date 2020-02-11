@@ -332,6 +332,12 @@ Finally use the git push command to upload the local repository content to the r
 git push
 ```
 
+> Tip! In case your branch does not exists at the origin you have to use
+
+```
+ git push --set-upstream origin my_awesome_branch_name
+```
+
 > Tip! in case you want to show a complete log use the git log --one-line to command
 
 ### Undoing changes
