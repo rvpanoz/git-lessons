@@ -59,31 +59,23 @@ Using a VCS also generally means that if you screw things up or lose files, you 
 - simple database that kept all the changes to files under revision control
   ([RCS](https://www.gnu.org/software/rcs/))
 
-Pros
+:+1: Easy setup
 
-- Easy setup
-
-Cons
-
-- High error proned
+:-1: High error proned
 
 ### Centralized Version Control Systems
 
-- collaboration with others
-- single server that contains all the versioned files, and a number of clients that check out files from that central place. (CVS, Subversion)
+- Collaboration with others
+- Single server that contains all the versioned files, and a number of clients that check out files from that central place. (CVS, Subversion)
 
 <p align="center">
   <img alt="centralized" src="./assets/images/centralized.png">
 </p>
 
-Pros
+:+1: Everyone knows to a certain degree what everyone else on the project is doing.
+:+1:Far easier to administer a CVCS than it is to deal with local databases on every client.
 
-- Everyone knows to a certain degree what everyone else on the project is doing.
-- Far easier to administer a CVCS than it is to deal with local databases on every client.
-
-Cons
-
-- Single point of failure that the centralized server represents.
+:-1: Single point of failure that the centralized server represents.
 
 ### Distributed Version Control Systems
 
