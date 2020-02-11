@@ -336,8 +336,28 @@ git push
 
 ### Undoing changes
 
-Open `Bob.txt` file and add some content. Now using the git reset command you can undo that action
+Open `Bob.txt` file and add some content.
+
+Next use the git add command to add `Bob.txt` change in the working directory to the staging area
+
+```
+git add Bob.txt
+```
+
+Now using the git reset command you can undo that action
 
 ```
 git reset
+```
+
+And if you want to clear the untracked file use the git clean command with
+
+```
+git clean -f -d // -f alias of -force, -d is useful when you want to clear an entire directory
+```
+
+Finally use the git reset --hard command to move the HEAD into a specific commit
+
+```
+git reset --hard HEAD`1 // remove the last commit
 ```
