@@ -396,6 +396,27 @@ the changes.
 Using the git merge to merge the develop and feature branch
 
 ```
-git checkout develop
-git merge feature-branch
+git checkout feature-branch
+git merge develop
 ```
+
+This creates a new “merge commit” in the feature branch that ties together the histories of both branches, giving you a branch structure that looks like this:
+
+<p align="center">
+  <img alt="merge" src="./assets/images/merge.svg">
+</p>
+
+As an alternative to merging, you can rebase the feature branch onto master branch using the following commands:
+
+```
+git checkout feature-branch
+git rebase develop
+```
+
+This moves the entire feature branch to begin on the tip of the develop branch, effectively incorporating all of the new commits in develop.
+
+> But, instead of using a merge commit, rebasing re-writes the project history by creating brand new commits for each commit in the original branch.
+
+<p align="center">
+  <img alt="rebase" src="./assets/images/rebase.svg">
+</p>
