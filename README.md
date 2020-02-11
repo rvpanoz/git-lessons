@@ -73,7 +73,7 @@ Using a VCS also generally means that if you screw things up or lose files, you 
 </p>
 
 :+1: Everyone knows to a certain degree what everyone else on the project is doing.
-:+1:Far easier to administer a CVCS than it is to deal with local databases on every client.
+:+1: Far easier to administer a CVCS than it is to deal with local databases on every client.
 
 :-1: Single point of failure that the centralized server represents.
 
@@ -85,14 +85,10 @@ Using a VCS also generally means that if you screw things up or lose files, you 
   <img alt="distributed" src="./assets/images/distributed.png">
 </p>
 
-Pros
+:+1: If any server dies, and these systems were collaborating via that server, any of the client repositories can be copied back up to the server to restore it
+:+1: Every clone is really a full backup of all the data
 
-- If any server dies, and these systems were collaborating via that server, any of the client repositories can be copied back up to the server to restore it
-- Every clone is really a full backup of all the data
-
-Cons
-
-- Slow initialization
+:-1: Slow initialization
 
 ## What is GIT and how it works?
 
