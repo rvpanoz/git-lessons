@@ -286,7 +286,7 @@ or you can use the git checkout command
 git checkout -b feature/my-awesome-feat
 ```
 
-### Making changes
+### Saving changes
 
 Create a new file in the root directory and named it `Bob.txt`.
 Inside that file write `Hello Bob!`
@@ -319,10 +319,51 @@ Next use the git commit command to add it to your next commit snapshot
 git commit -m "dev: add Bob.txt file"
 ```
 
+In case you dont want to commit but save your changes for later use
+you can use the git stash command and git stash --apply to restore the changes
+
+```
+git stash
+```
+
 Finally use the git push command to upload the local repository content to the remote repository.
 
 ```
 git push
 ```
 
+> Tip! In case your branch does not exists at the origin you have to use
+
+```
+ git push --set-upstream origin my_awesome_branch_name
+```
+
 > Tip! in case you want to show a complete log use the git log --one-line to command
+
+### Undoing changes
+
+Open `Bob.txt` file and add some content.
+
+Next use the git add command to add `Bob.txt` change in the working directory to the staging area
+
+```
+git add Bob.txt
+```
+
+Now using the git reset command you can undo that action
+
+```
+git reset
+```
+
+And if you want to clear the untracked file use the git clean command with
+
+```
+git clean -f -d // -f alias of -force, -d is useful when you want to clear an entire directory
+```
+
+Finally use the git reset --hard command to move the HEAD into a specific commit
+
+```
+git reset --hard HEAD`1 // remove the last commit
+```
