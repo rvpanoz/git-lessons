@@ -272,7 +272,7 @@ Use the git checkout command and switch to the develop branch
 git checkout develop
 ```
 
-Create a new branch from the develop branch and select it using
+Create a new branch from the develop branch and switch to it using
 the git checkout command
 
 ```
@@ -285,3 +285,44 @@ or you can use the git checkout command
 ```
 git checkout -b feature/my-awesome-feat
 ```
+
+### Making changes
+
+Create a new file in the root directory and named it `Bob.txt`.
+Inside that file write `Hello Bob!`
+
+Now, use the git status command to inspect the repository.
+
+```
+git status
+```
+
+Next use the git add command to add the new file in the staging area.
+
+```
+git add Bob.txt // to add only Bob.txt
+```
+
+```
+git add . // to add all the modified files
+```
+
+Now, use again the git status command to inspect the repository.
+
+```
+git status
+```
+
+Next use the git commit command to add it to your next commit snapshot
+
+```
+git commit -m "dev: add Bob.txt file"
+```
+
+Finally use the git push command to upload the local repository content to the remote repository.
+
+```
+git push
+```
+
+> Tip! in case you want to show a complete log use the git log --one-line to command
