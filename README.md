@@ -272,7 +272,7 @@ Use the git checkout command and switch to the develop branch
 git checkout develop
 ```
 
-Create a new branch from the develop branch and select it using
+Create a new branch from the develop branch and switch to it using
 the git checkout command
 
 ```
@@ -285,3 +285,10 @@ or you can use the git checkout command
 ```
 git checkout -b feature/my-awesome-feat
 ```
+
+### Making changes
+
+Create a new file in the root directory and named it `Bob.txt`.
+Inside that file write `Hello Bob!`
+
+Now, use the git status command to inspect the repository
